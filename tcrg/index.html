@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>MPCA API</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>MPCA Data API</h1>
+		<p>David Fawcett MN.IT@MPCA</p>
+	</header>
+
+		<section class="slide" id="First"><div>
+		<pre>
+			<code>{</code>
+			<code>  "title" : "MPCA's Data API",</code>
+			<code>  "outline" : [</code>
+			<code>      "What's an API?",</code>
+			<code>      "Using MPCA’s data",</code>
+			<code>      "Why API?"],</code>
+			<code>  "by: "David Fawcett  MN.IT@MPCA"</code>
+			<code>}</code>
+		</pre>
+		<style>
+              #First {
+				font-size:30px;
+				}
+		</style>
+	</div></section>
+
+	<section class="slide cover" id="Picture"><div>
+		<h2>API => Conversation</h2>
+		<img src="pictures/semaphore.jpg" alt="">
+		<style>
+			#Picture h2 {
+				color:#FFF;
+				}
+			#Picture p {
+				margin:10px 0 0;
+				color:#FFF;
+				font-size:50px;
+				}
+		</style>
+	</div></section>
+		<section class="slide"><div>
+		<h2>Where are the bikes?</h2>
+		<img src="pictures/sock.jpg" alt="">
+		<p><a href="http://api.citybik.es/nice-ride.json">http://api.citybik.es/nice-ride.json</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>History</h2>
+		<ul>
+			<li>2003 <a href="http://cf.pca.state.mn.us/water/watershedweb/wdip/search_more.cfm">Surface Water EDA</a> (downloadable)</li>
+			<li>followed by <a href="http://www.pca.state.mn.us/index.php/data/groundwater.html">Air EDA</a>, <a href="http://www.pca.state.mn.us/index.php/data/groundwater.html">Groundwater EDA</a></li>
+			<li><a href="http://www.pca.state.mn.us/index.php/data/wimn-whats-in-my-neighborhood/whats-in-my-neighborhood.html">What's in My Neighborhood</a></li>
+			<li>2013 <a href="http://services.pca.state.mn.us/">API</a> launched</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>What can I do with it?</h2>
+		<ul>
+			<li>Search for data</li>
+			<li>Download data</li>
+			<li>Build your own app</li>
+			<li>Something we never thought of</li>
+		</ul>
+		<p class="note">Most importantly: anything you want...</p>
+	</div></section>
+	<section class="slide cover" id="abacus"><div>
+		<p>15,000 documents</p>
+		<p>80,000 stations</p>
+		<p>150,000 facilities</p>
+		<p>16,000,000 results</p>
+		<img src="pictures/abacus.jpg" alt="">
+		<style>
+			#abacus h2 {
+				color:#FFF;
+				}
+			#abacus p {
+				margin:10px 0 0;
+				color:#FFF;
+				font-size:50px;
+				}
+		</style>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Show Me the Data</h2>
+		<a href="http://services.pca.state.mn.us"><img src="pictures/docpage.png" alt=""></a>
+	</div></section>
+	<section class="slide"><div>
+		<h2>GET ing Data</h2>
+		<p>base URI + parameters</p>
+		<p><a href="http://services.pca.state.mn.us/api/v1/surfacewater/monitoring-stations?stationId=27-0016-00-201&format=text">/monitoring-stations?stationId=27-0016-00-201</a></p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Returns Data</h2>
+		<p>"data":[{"stationName" : "HARRIET", "sampleCount" : "312", "resultCount" : "41911", "startYear" : "1976", "latestYear" : "2013"}]</p>
+	    <p class="note">Data formats include {json, jsonp, text, csv, xls, ods, and tab}</p>
+	</div></section>
+		<section class="slide"><div>
+		<h2>Approach for using API</h2>
+		<p><strong>Web App</strong> : search => find sites => select site to get detail info</br><strong>API</strong> : collections, filtered collections, detail records</p>
+		
+	</div></section>
+	<section class="slide"><div>
+		<h2>What's In My Neighborhood</h2>
+		<ul>
+			<li><a href="http://cf.pca.state.mn.us/wimn/search.cfm">Web Search</a></li>
+			<li><a href="http://services.pca.state.mn.us/api/v1/wimn/sites?searchString=crystal+sugar&format=text">API Search</a></li>
+			<li><a href="http://services.pca.state.mn.us/api/doc/v1/wimn/sites">API route documentation</a></li>
+			<li><a href="http://cf.pca.state.mn.us/wimn/siteInfo.cfm?siteid=210">Example Facility Web Page</a></li>
+			<li><a href="http://services.pca.state.mn.us/api/v1/wimn/sites/activities?siteId=210&format=text">Example Facility API Call</a></li>
+			
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>What's In My Neighborhood - Documents</h2>
+		<ul>
+			<li><a href="http://services.pca.state.mn.us/api/v1/wimn/sites/documents?siteId=326&format=text">Get a list of documents for a site</a></li>
+			<li><a href="http://services.pca.state.mn.us/api/v1/wimn/sites/documents/document?documentId=428366">Get a specific document</a></li>
+			<li><a href="http://fawcett.github.io/mpca-examples/myhood-examples.html">API Usage Examples</a></li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>A Map</h2>
+		<a href="http://fawcett.github.io/mpca-examples/surfacewater-stations.html"><img src="pictures/map.png" alt=""></a>
+	</div></section>
+<section class="slide"><div>
+		<h2>How did this happen?</h2>
+		<ul>
+			<li>Grass roots by few staff</li>
+			<li>Managers open to change</li>
+			<li>Upper management who believes in open data</li>
+			<li>Demonstrated value</li>
+			<li>Non-profit wanted to make a mobile app</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Goals</h2>
+		<ul>
+			<li>Make all of our data easy to get</li>
+			<li>Provide stable, current, free data</li>
+			<li>Anonymous access</li>
+			<li>Get people to use our data for analysis, apps, etc</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Benefits to Agency</h2>
+		<ul>
+			<li>Reduces data and file requests</li>
+			<li>Abstract data systems</li>
+			<li>Security</li>
+			<li>Gets our data out there!</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>What's Next</h2>
+		<ul>
+			<li>More documents</li>
+			<li>Spatial queries</li>
+			<li>Potential data collection</li>
+			<li>What would help you?!</li>
+		</ul>
+		
+	</div></section>
+	<section class="slide"><div>
+		<h2>Credit is Due</h2>
+		<p>Greg Siems, Tad Schindler, Jason Ewert</br>MPCA management and staff</br>MN.IT@MPCA management and staff</p>
+		
+	</div></section>
+
+	<section class="slide"><div>
+		
+		<img src="pictures/mnitlogo.jpg" alt=""><img src="pictures/mpca-logo.jpg" alt=""><img src="pictures/logo-legacy.png" alt="">
+		<p>david.fawcett@state.mn.us</br>@davidfawcett</p>
+		<h4><a href="http://fawcett.github.io/mpca-examples/">http://fawcett.github.io/mpca-examples/</a></h4>
+	</div></section>
+		
+		<section class="slide"><div>
+		<h3>Photo Credits</h3>
+		<p>United States Navy
+			https://www.flickr.com/photos/laffy4k/208810939/
+			https://www.flickr.com/photos/boston_public_library/8139259199/
+			https://www.flickr.com/photos/thomasclaveirole/538819881
+		</p>	
+		</div></section>
+
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+</body>
+</html>
