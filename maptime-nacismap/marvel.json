@@ -1,0 +1,17 @@
+{
+      "type": "Feature",
+      "properties": {
+        "title": "Marvel Bar",
+        "address": "50 N 2nd Avenue",
+        "web": "http://www.marvelbar.com/",
+        "poi_type": "bar",
+        "scoop":"Hidden door, artisan cocktails"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.26870083808898,
+          44.985842270235345
+        ]
+      }
+    }

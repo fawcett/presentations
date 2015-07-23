@@ -1,0 +1,71 @@
+Intro to OSM Mapping
+
+What is OSM?
+    Not just a map, data!
+    A lot more than streets!
+
+Why contribute to OSM?
+Map things that are of interest to you
+HOT OSM
+Work to build the best map/database 
+You get to use the data!
+mapquest open: http://mapq.st/1xP8BVA
+
+How to edit
+create account
+iD
+JOSM, etc.
+Pushpin app
+Appropriate base data sources
+
+Data Model (need better title)
+nodes, ways, relations => points, lines, areas
+tags
+http://wiki.openstreetmap.org/wiki/Map_Features
+change sets
+comments
+“Map what’s on the ground”
+
+landmines/hazards
+relations
+imports
+survey vs armchair
+mailing lists
+community  (carefully)
+“Don’t tag for the renderer”
+
+Resources
+About OSM
+http://learnosm.org/en/
+http://www.openstreetmap.org
+http://openstreetmap.us/
+https://help.openstreetmap.org/
+Mailing Lists http://wiki.openstreetmap.org/wiki/Mailing_lists
+http://beamapper.com/
+http://wiki.openstreetmap.org/wiki/Good_practice
+Tagging
+https://taginfo.openstreetmap.org/
+Humanitarian OSM
+http://hot.openstreetmap.org/projects
+https://wiki.openstreetmap.org/wiki/2014_West_Africa_Ebola_Response
+https://wiki.openstreetmap.org/wiki/2014_West_Africa_Ebola_Response#Edit_the_Map
+http://tasks.hotosm.org/
+
+
+What I like to map
+Haiti, Africa, vacation places, Mpls buildings, Brunello vineyards
+http://www.openstreetmap.org/user/DavidF/history#map=3/15.96/-41.31
+
+Suggestions for starting
+points
+your neighborhood or area you know
+Humanitarian Projects (Haiti, Ebola)
+Task sites
+
+
+
+Simple Example
+http://www.openstreetmap.org/edit?editor=id#map=19/44.90622/-93.28840
+http://www.saguarompls.com/
+
+
